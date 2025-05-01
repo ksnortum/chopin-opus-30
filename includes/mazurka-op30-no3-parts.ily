@@ -15,6 +15,10 @@ slurShapeB = \shape #'((0 . 0) (0 . 1) (0 . 0) (0 . 0)) \etc
 slurShapeC = \shape #'((-0.25 . 2) (-0.25 . -0.25) (0 . -0.25) (0 . 2)) \etc
 slurShapeD = \shape #'((0 . 0) (0 . -0.5) (0 . -0.5) (0 . 2)) \etc
 slurShapeE = \shape #'((0 . 0.25) (0 . 1) (0 . 0.5) (0 . 0)) \etc
+%
+slurShapeF = \shape #'((0 . 0) (0 . 0.5) (0 . 2) (0 . 2.75)) \etc
+slurShapeG = \shape #'((0 . 0) (0 . 0.5) (0 . 2) (0 . 2.5)) \etc
+slurShapeH = \shape #'((0 . 0) (0 . 0.5) (0 . 2) (0 . 2.75)) \etc
 
 tieShapeA = \shape #'((0 . 0) (0 . -0.25) (0 . -0.5) (0 . 0)) \etc
 tieShapeB = \shape #'((0 . 0) (0 . -0.25) (0 . -0.5) (0 . 0)) \etc
@@ -208,24 +212,24 @@ leftHand = \relative {
   
   \barNumberCheck 9
   \repeat volta 2 {
-    \stemDown <df,, df'>8-.[ r16 df''']( \stemNeutral f,4 af,) |
-    df,8-.[ r16 df'']( f,4 af,) |
-    \stemDown gf,8-.[ r16 bf'']( \stemNeutral df,4 gf,) |
-    df8-.[ r16 df'']( f,4 af,) |
-    \stemDown gf,8-.[ r16 bff'']( \stemNeutral df,4 gf,) |
-    df8-.[ r16 df'']( f,4 af,) |
-    \stemDown <df,, df'>8-.[ r16 df''']( \stemNeutral f,4 af,) |
-    df,8-.[ r16 df'']( f,4 af,) |
+    \stemDown <df,, df'>8-.[ r16 df''']-\slurShapeF ( \stemNeutral f,4 af,) |
+    df,8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
+    \stemDown gf,8-.[ r16 bf'']-\slurShapeG ( \stemNeutral df,4 gf,) |
+    df8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
+    \stemDown gf,8-.[ r16 bff'']-\slurShapeG ( \stemNeutral df,4 gf,) |
+    df8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
+    \stemDown <df,, df'>8-.[ r16 df''']-\slurShapeF ( \stemNeutral f,4 af,) |
+    df,8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
     
     \barNumberCheck 17
-    \stemDown af,8-.[ r16 c'']( \stemNeutral gf4 af,) |
-    df,8-.[ r16 df'']( f,4 af,) |
-    \stemDown af,8-.[ r16 c'']( \stemNeutral gf4 af,) |
-    df,8-.[ r16 df'']( f,4 af,) |
-    \stemDown af,8-. c''( \stemNeutral gf4 af,) |
-    df,8-. df''( ff,4 af,) |
-    \stemDown af,8-.[ r16 c'']( \stemNeutral gf4 af,) |
-    df,8-.[ r16 df'']( ff,4 af,) |
+    \stemDown af,8-.[ r16 c'']-\slurShapeH ( \stemNeutral gf4 af,) |
+    df,8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
+    \stemDown af,8-.[ r16 c'']-\slurShapeH ( \stemNeutral gf4 af,) |
+    df,8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
+    \stemDown af,8-. c''-\slurShapeH ( \stemNeutral gf4 af,) |
+    df,8-. df''-\slurShapeF ( ff,4 af,) |
+    \stemDown af,8-.[ r16 c'']-\slurShapeH ( \stemNeutral gf4 af,) |
+    df,8-.[ r16 df'']-\slurShapeF ( ff,4 af,) |
   }
   
   \barNumberCheck 25
@@ -295,27 +299,27 @@ leftHand = \relative {
     { f,4-. f-. r | e4-. e-. r | s2. * 2 | ef!4-. ef-. r | eff4-. eff r | } 
   >>
   % like 9
-  df8-.[ r16 df'']( f,4 af,) |
-  df,8-.[ r16 df'']( f,4 af,) |
+  df8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
+  df,8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
   
   \barNumberCheck 81
-  \stemDown gf,8-.[ r16 bf'']( \stemNeutral df,4 gf,) |
-  df8-.[ r16 df'']( f,4 af,) |
-  \stemDown gf,8-.[ r16 bff'']( \stemNeutral df,4 gf,) |
-  df8-.[ r16 df'']( f,4 af,) |
-  \stemDown <df,, df'>8-.[ r16 df''']( \stemNeutral f,4 af,) |
-  df,8-.[ r16 df'']( f,4 af,) |
-  \stemDown af,8-.[ r16 c'']( \stemNeutral gf4 af,) |
-  df,8-.[ r16 df'']( f,4 af,) |
+  \stemDown gf,8-.[ r16 bf'']-\slurShapeG ( \stemNeutral df,4 gf,) |
+  df8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
+  \stemDown gf,8-.[ r16 bff'']-\slurShapeG ( \stemNeutral df,4 gf,) |
+  df8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
+  \stemDown <df,, df'>8-.[ r16 df''']-\slurShapeF ( \stemNeutral f,4 af,) |
+  df,8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
+  \stemDown af,8-.[ r16 c'']-\slurShapeH ( \stemNeutral gf4 af,) |
+  df,8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
   
   \barNumberCheck 89
-  \stemDown af,8-.[ r16 c'']( \stemNeutral gf4 af,) |
-  df,8-.[ r16 df'']( f,4 af,) |
+  \stemDown af,8-.[ r16 c'']-\slurShapeH ( \stemNeutral gf4 af,) |
+  df,8-.[ r16 df'']-\slurShapeF ( f,4 af,) |
   % like 20
-  \stemDown af,8-. c''( \stemNeutral gf4 af,) |
-  df,8-. df''( ff,4 af,) |
-  \stemDown af,8-.[ r16 c'']( \stemNeutral gf4 af,) |
-  df,8-. df''( ff,4 af,) |
+  \stemDown af,8-. c''-\slurShapeH ( \stemNeutral gf4 af,) |
+  df,8-. df''-\slurShapeF ( ff,4 af,) |
+  \stemDown af,8-.[ r16 c'']-\slurShapeH ( \stemNeutral gf4 af,) |
+  df,8-. df''-\slurShapeF ( ff,4 af,) |
   <df af'>2. |
 }
 
