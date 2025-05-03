@@ -15,7 +15,6 @@ slurShapeB = \shape #'((0 . 0) (0 . 1) (0 . 0) (0 . 0)) \etc
 slurShapeC = \shape #'((-0.25 . 2) (-0.25 . -0.25) (0 . -0.25) (0 . 2)) \etc
 slurShapeD = \shape #'((0 . 0) (0 . -0.5) (0 . -0.5) (0 . 2)) \etc
 slurShapeE = \shape #'((0 . 0.25) (0 . 1) (0 . 0.5) (0 . 0)) \etc
-%
 slurShapeF = \shape #'((0 . 0) (0 . 0.5) (0 . 2) (0 . 2.75)) \etc
 slurShapeG = \shape #'((0 . 0) (0 . 0.5) (0 . 2) (0 . 2.5)) \etc
 slurShapeH = \shape #'((0 . 0) (0 . 0.5) (0 . 2) (0 . 2.75)) \etc
@@ -332,7 +331,7 @@ dynamics = {
   
   \barNumberCheck 9
   \repeat volta 2 {
-    s2. % TODO needed? \tag layout { s2. } \tag midi { s2.\ff } |
+    \tag layout { s2. } \tag midi { s2.\f } |
     s2. * 3 |
     s2.\pp |
     s2. |
@@ -366,7 +365,7 @@ dynamics = {
   s2. |
   
   \barNumberCheck 41
-  s2.^\sotoVoce |
+  \tag layout { s2.^\sotoVoce } \tag midi { s2.\pp } |
   s2. |
   s2.\< |
   s4 s2\! |
@@ -385,7 +384,7 @@ dynamics = {
   \barNumberCheck 57
   s2.\p |
   s2. * 3 |
-  s2\< s8 s\! |
+  \tag layout { s2\< } \tag midi { s2\p\< } s8 s\! |
   s2. * 2 |
   s4 s2\sf |
   
@@ -422,13 +421,42 @@ dynamics = {
 
 tempi = {
   \set Score.tempoHideNote = ##t
-  \tempo "Allegro non troppo" 4 = 126
+  \tempo "Allegro non troppo" 4 = 132
   s2. * 8 |
   
   \barNumberCheck 9
   \repeat volta 2 {
-    
+    s2. * 16 |
   }
+  
+  \barNumberCheck 25
+  s2. * 8 |
+  
+  \barNumberCheck 33
+  s2. * 7 |
+  s4 \tempo 4 = 120 s \tempo 4 = 112 s |
+  
+  \barNumberCheck 41
+  \tempo 4 = 132
+  s2. * 32 |
+  
+  \barNumberCheck 73
+  s2. * 2 |
+  \tempo 4 = 120 s2. |
+  \tempo 4 = 112 s2. |
+  \tempo 4 = 104 s2. |
+  \tempo 4 = 96 s2. |
+  \tempo 4 = 132
+  s2. * 2 |
+  
+  \barNumberCheck 81
+  s2. * 8 |
+  
+  \barNumberCheck 89
+  s2. * 5 |
+  \tempo 4 = 116 s2 \tempo 4 = 104 s4 |
+  \tempo 4 = 80
+  s2. |
 }
 
 pedal = {
@@ -436,11 +464,11 @@ pedal = {
   
   \barNumberCheck 9
   \repeat volta 2 {
+    s2-\tweak Y-offset -3 \sd s8 s\su |
+    s2\sd s8 s\su |
     s2-\tweak Y-offset -2 \sd s8 s\su |
     s2\sd s8 s\su |
-    s2-\tweak Y-offset -1 \sd s8 s\su |
-    s2\sd s8 s\su |
-    s2-\tweak Y-offset -1 \sd s8 s\su |
+    s2-\tweak Y-offset -2 \sd s8 s\su |
     s2\sd s8 s\su |
     s2-\tweak Y-offset -3 \sd s8 s\su |
     s2\sd s8 s\su |
@@ -449,11 +477,11 @@ pedal = {
     s2-\tweak Y-offset -1 \sd s8 s\su |
     s2\sd s8 s\su |
     s2-\tweak Y-offset -1 \sd s8 s\su |
-    s2\sd s8 s\su |
     s2-\tweak Y-offset -1 \sd s8 s\su |
+    s2-\tweak Y-offset -2 \sd s8 s\su |
     s2\sd s8 s\su |
+    s2-\tweak Y-offset -2 \sd s8 s\su |
     s2-\tweak Y-offset -1 \sd s8 s\su |
-    s2\sd s8 s\su |
   }
   
   \barNumberCheck 25

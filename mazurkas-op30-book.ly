@@ -7,6 +7,7 @@
 \include "includes/mazurka-op30-no1-parts.ily"
 \include "includes/mazurka-op30-no2-parts.ily"
 \include "includes/mazurka-op30-no3-parts.ily"
+\include "includes/mazurka-op30-no4-parts.ily"
 
 % Title page
 
@@ -40,8 +41,12 @@
 \mazurkaThreeNotes
 \pageBreak
 
+\tocItem \markup "No. 4 Allegretto in C♯ minor" 
+\mazurkaFourNotes
+
 % Midi
 
 \mazurkaOneMidi
 \mazurkaTwoMidi
 \mazurkaThreeMidi
+\mazurkaFourMidi
