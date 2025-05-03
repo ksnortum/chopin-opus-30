@@ -20,8 +20,12 @@ pocoAPocoCrescMarkup =
 pocoAPocoCresc =
   #(make-music 'CrescendoEvent 'span-direction START 'span-type 'text
                'span-text pocoAPocoCrescMarkup)
-
-% rf = #(make-dynamic-script "rf")
+  
+pocoStrettoEDimMarkup = 
+  \markup \large \italic \whiteout \pad-markup #0.25 "poco stretto e dim."
+pocoStrettoEDim =
+  #(make-music 'DecrescendoEvent 'span-direction START 'span-type 'text
+               'span-text pocoStrettoEDimMarkup)
 
 %
 % Redefine
@@ -49,15 +53,6 @@ tupletOn = {
   \undo \omit TupletBracket
   \undo \omit TupletNumber
 }
-% 
-% strictSpacingOn = {
-%   \override Score.SpacingSpanner.strict-note-spacing = ##t
-%   \newSpacingSection
-% }
-% strictSpacingOff = {
-%   \override Score.SpacingSpanner.strict-note-spacing = ##f
-%   \newSpacingSection
-% }
 
 trillFlat = \markup \tiny \concat { " " \flat }
 flatInsideSlur = \tweak outside-staff-priority ##f \etc
@@ -73,19 +68,7 @@ dolce = \markup \large \italic dolce
 legato = \markup \large \italic legato
 risoluto = \markup \large \italic risoluto
 slentando = \markup \large \italic slentando
-% dolceWO = \markup \large \italic \whiteout \pad-markup #0.25 dolce
-% piuDolce = \markup \large \italic "più dolce"
-% ms = \markup \large \italic "m.s."
+slentandoWO = \markup \large \italic \whiteout \pad-markup #0.25 slentando
 pocoRiten = \markup \large \italic "poco riten."
-% piuRit = \markup \large \italic "più rit."
 aTempo = \markup \large \italic "a tempo"
-% sempreLegatissimo = \markup \large \italic "sempre  legatissimo"
-% pSempreLegato = \markup { \dynamic p \large \italic "sempre legato" }
-% fAgitato = \markup { \dynamic f \large \italic agitato }
-% piuF = \markup { \large \italic più \dynamic f }
-% piuP = \markup { \large \italic più \dynamic p }
-% semprePiuP = \markup { \large \italic "sempre più" \dynamic p }
-% pocoRf = \markup { \large \italic poco \dynamic rf }
-% laMelodiaSempreLegato = \markup \large \italic "la melodia sempre legato"
-% leggieroConLegtao = 
-%   \markup { \large \italic { leggiero \normalsize "(con legato)" } }
+sempreP = \markup { \large \italic sempre \dynamic p }

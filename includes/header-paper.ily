@@ -56,7 +56,7 @@
 \layout {
   \context {
     \Score
-    % TODO uncomment \omit BarNumber
+    \omit BarNumber
     \override Slur.details.free-head-distance = 0.75
     \override PhrasingSlur.details.free-head-distance = 0.75
   }
