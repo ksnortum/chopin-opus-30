@@ -5,6 +5,8 @@
 
 \include "global-variables.ily"
 
+#(ly:expect-warning-times 2 "cyclic dependency")
+
 %%% Positions and shapes %%%
 
 slurShapeA = \shape #'((0 . 0) (0 . -0.5) (0 . -0.5) (0 . 1.5)) \etc

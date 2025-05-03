@@ -18,7 +18,7 @@ You may also [download the latest release](https://github.com/ksnortum/chopin-op
 
 ### Programming errors
 
-When you compile the piece, you may see two programming errors that are likely caused by [this bug](https://gitlab.com/lilypond/lilypond/-/issues/6171) in LilyPond.  They do not affect the output and can be ignored.
+I have suppressed the output of two programming errors that happen during compilation.  They are likely caused by [this bug](https://gitlab.com/lilypond/lilypond/-/issues/6171) in LilyPond and do not affect the output of the piece.
 
 ### Two-sided printing
 

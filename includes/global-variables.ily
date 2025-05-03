@@ -5,6 +5,10 @@
 % Scheme functions
 %
 
+#(define ly:expect-warning-times (lambda args
+  (for-each (lambda _ (apply ly:expect-warning (cdr args)))
+            (iota (car args)))))
+
 makeSpanner =
 #(define-music-function (mrkup) (markup?)
   #{
